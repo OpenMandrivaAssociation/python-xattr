@@ -3,12 +3,12 @@
 
 Summary: Extended attributes for python
 Name: python-xattr
-Version: 0.2.1
-Release: %mkrel 2
+Version: 0.2.2
+Release: %mkrel 1
 License: GPL
 Group: Development/Python
 URL: http://pyxattr.sourceforge.net/
-Source: http://dl.sf.net/%{real_name}/%{real_name}-%{version}.tar.bz2
+Source: http://kent.dl.sourceforge.net/sourceforge/%{real_name}/%{real_name}-%{version}.tar.gz
 Provides: pyxattr = %{version}-%{release}
 BuildRequires: python-devel
 BuildRequires: libattr-devel
@@ -31,7 +31,7 @@ rm -rf %{buildroot}
 python setup.py install --root="%{buildroot}" --prefix="%{_prefix}"
 
 # move doc at the right place
-mv %{buildroot}/%{_docdir}/%{real_name}-%{version}/ %{buildroot}/%{_docdir}/%{name}-%{version}/
+# mv %{buildroot}/%{_docdir}/%{real_name}-%{version}/ %{buildroot}/%{_docdir}/%{name}-%{version}/
 
 
 %clean
@@ -40,6 +40,6 @@ mv %{buildroot}/%{_docdir}/%{real_name}-%{version}/ %{buildroot}/%{_docdir}/%{na
 %files
 %defattr(-, root, root, 0755)
 %{py_platsitedir}/xattr.so
-%{_docdir}/%{name}-%{version}/
-
+# %{_docdir}/%{name}-%{version}/
+%py_platsitedir/*.5.egg-info
 

@@ -13,6 +13,7 @@ Provides: pyxattr = %{version}-%{release}
 BuildRequires: python-devel
 BuildRequires: libattr-devel
 Requires: python
+BuildRoot: %{_tmppath}/%{name}--%{version}-%{release}-root
 
 %description
 python-xattr is a C extension module for Python which implements

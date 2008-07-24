@@ -5,7 +5,7 @@
 Summary: Extended attributes for python
 Name: python-xattr
 Version: 0.4
-Release: %mkrel 1
+Release: %mkrel 3
 License: GPL
 Group: Development/Python
 URL: http://pyxattr.sourceforge.net/

@@ -1,4 +1,3 @@
-
 %define real_name pyxattr
 %define short_name xattr
 
@@ -11,9 +10,9 @@ Group: Development/Python
 URL: http://pyxattr.sourceforge.net/
 Source: http://kent.dl.sourceforge.net/sourceforge/%{real_name}/%{real_name}-%{version}.tar.gz
 Provides: pyxattr = %{version}-%{release}
-BuildRequires: python-devel
+%py_requires -d
 BuildRequires: libattr-devel
-Requires: python
+BuildRequires: python-setuptools
 BuildRoot: %{_tmppath}/%{name}--%{version}-%{release}-root
 
 %description
@@ -22,7 +21,7 @@ extended attributes manipulation. It is a wrapper on top of the
 attr C library - see attr(5).
 
 %prep
-%setup -n %{short_name}-%{version}
+%setup -qn %{short_name}-%{version}
 
 %build
 CFLAGS="%{optflags}" %{__python} setup.py build

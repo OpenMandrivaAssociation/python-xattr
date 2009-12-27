@@ -1,10 +1,9 @@
 %define real_name pyxattr
-%define short_name xattr
 
 Summary: Extended attributes for python
 Name: python-xattr
-Version: 0.4
-Release: %mkrel 5
+Version: 0.5.0
+Release: %mkrel 1
 License: GPL
 Group: Development/Python
 URL: http://pyxattr.sourceforge.net/
@@ -21,7 +20,7 @@ extended attributes manipulation. It is a wrapper on top of the
 attr C library - see attr(5).
 
 %prep
-%setup -qn %{short_name}-%{version}
+%setup -qn %{real_name}-%{version}
 
 %build
 CFLAGS="%{optflags}" %{__python} setup.py build
@@ -39,5 +38,4 @@ python setup.py install --root="%{buildroot}" --prefix="%{_prefix}"
 
 %files
 %defattr(-, root, root, 0755)
-%{_bindir}/xattr
 %{py_platsitedir}/*

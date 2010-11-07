@@ -3,13 +3,12 @@
 Summary: Extended attributes for python
 Name: python-xattr
 Version: 0.6.1
-Release: %mkrel 2
+Release: %mkrel 3
 License: GPL
 Group: Development/Python
 URL: http://pypi.python.org/pypi/xattr
 Source: http://pypi.python.org/packages/source/x/xattr/xattr-%{version}.tar.gz
 Provides: pyxattr = %{version}-%{release}
-%py_requires -d
 BuildRequires: libattr-devel
 BuildRequires: python-setuptools
 BuildRoot: %{_tmppath}/%{name}--%{version}-%{release}-root

@@ -3,15 +3,14 @@
 Summary: Extended attributes for python
 Name: python-xattr
 Version: 0.6.1
-Release: %mkrel 3
+Release: 4
 License: GPL
 Group: Development/Python
 URL: http://pypi.python.org/pypi/xattr
 Source: http://pypi.python.org/packages/source/x/xattr/xattr-%{version}.tar.gz
 Provides: pyxattr = %{version}-%{release}
-BuildRequires: libattr-devel
+BuildRequires: attr-devel
 BuildRequires: python-setuptools
-BuildRoot: %{_tmppath}/%{name}--%{version}-%{release}-root
 
 %description
 python-xattr is a C extension module for Python which implements
@@ -25,14 +24,9 @@ attr C library - see attr(5).
 CFLAGS="%{optflags}" %{__python} setup.py build
 
 %install
-rm -rf %{buildroot}
 python setup.py install --root="%{buildroot}" --prefix="%{_prefix}"
 
-%clean
-%{__rm} -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{py_platsitedir}/*
 %{_bindir}/xattr
 

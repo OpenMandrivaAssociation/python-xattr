@@ -1,2 +1,4 @@
+removed_sources:
+  xattr-0.6.1.tar.gz: d435a58684cb8ed4aa045380c3157efd1c6ed553
 sources:
-  "xattr-0.6.1.tar.gz": d435a58684cb8ed4aa045380c3157efd1c6ed553
+  xattr-0.7.5.tar.gz: afc7cd87f66303ce0554910e8841d49b3db6e88d

@@ -2,8 +2,8 @@
 
 Summary: Extended attributes for python
 Name: python-xattr
-Version: 0.6.1
-Release: 5
+Version: 0.7.8
+Release: 1
 License: GPL
 Group: Development/Python
 URL: http://pypi.python.org/pypi/xattr
@@ -27,7 +27,7 @@ CFLAGS="%{optflags}" %{__python} setup.py build
 python setup.py install --root="%{buildroot}" --prefix="%{_prefix}"
 
 %files
-%{py_platsitedir}/*
+%{py_puresitedir}/*
 %{_bindir}/xattr
 
 

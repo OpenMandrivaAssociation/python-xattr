@@ -10,6 +10,7 @@ URL: http://pypi.python.org/pypi/xattr
 Source: http://pypi.python.org/packages/source/x/xattr/xattr-%{version}.tar.gz
 Provides: pyxattr = %{version}-%{release}
 BuildRequires: attr-devel
+BuildRequires: python-cffi
 BuildRequires: python-setuptools
 
 %description

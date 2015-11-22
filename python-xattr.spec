@@ -12,6 +12,7 @@ Provides: pyxattr = %{version}-%{release}
 BuildRequires: attr-devel
 BuildRequires: python-cffi
 BuildRequires: python-setuptools
+BuildRequires: pkgconfig(python3)
 
 %description
 python-xattr is a C extension module for Python which implements

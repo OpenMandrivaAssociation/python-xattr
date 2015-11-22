@@ -24,10 +24,10 @@ attr C library - see attr(5).
 CFLAGS="%{optflags}" %{__python} setup.py build
 
 %install
-python setup.py install --root="%{buildroot}" --prefix="%{_prefix}"
+python setup.py install --root="%{buildroot}" --prefix="%{_prefix}" --install-purelib=%{python3_sitearch}
 
 %files
-%{py_puresitedir}/*
+%{py_platsitedir}/*
 %{_bindir}/xattr
 
 

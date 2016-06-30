@@ -2,12 +2,12 @@
 
 Summary:	Extended attributes for python
 Name:		python-xattr
-Version:	0.7.8
+Version:	0.8.0
 Release:	1
 License:	GPL
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/xattr
-Source:		http://pypi.python.org/packages/source/x/xattr/xattr-%{version}.tar.gz
+Source:		https://pypi.python.org/packages/34/17/91e70a1bcd2f0cf82824b744a63234431f5a47ea844f67076ce48166cdde/xattr-%{version}.tar.gz
 Provides:	pyxattr = %{version}-%{release}
 BuildRequires:	attr-devel
 BuildRequires:	python-cffi

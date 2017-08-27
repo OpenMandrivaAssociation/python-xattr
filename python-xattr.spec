@@ -3,7 +3,7 @@
 Summary:	Extended attributes for python
 Name:		python-xattr
 Version:	0.8.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/xattr
@@ -23,8 +23,7 @@ extended attributes manipulation. It is a wrapper on top of the
 attr C library - see attr(5).
 
 %package -n	python2-%{real_name}
-Summary:	Cycler python2 bindings
-License:	LGPLv2
+Summary:	Extended attributes for python
 
 %description -n python2-%{real_name}
 This package includes Python 2 bindings for %{name}.

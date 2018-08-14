@@ -1,15 +1,18 @@
 %define real_name xattr
+# we don't want to provide private python extension libs
+%define _exclude_files_from_autoprov %{python2_sitearch}/.*\\.so\\|%{python3_sitearch}/.*\\.so
 
 Summary:	Extended attributes for python
 Name:		python-xattr
-Version:	0.9.3
+Version:	0.9.6
 Release:	1
 License:	GPL
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/xattr
-Source0:	https://github.com/xattr/xattr/archive/v%{version}.tar.gz
+Source0:	https://github.com/xattr/xattr/archive/%{real_name}-%{version}.tar.gz
 Provides:	pyxattr = %{version}-%{release}
 BuildRequires:	attr-devel
+BuildRequires:	pkgconfig(libffi)
 BuildRequires:	python-cffi
 BuildRequires:	python2-cffi
 BuildRequires:	python-setuptools

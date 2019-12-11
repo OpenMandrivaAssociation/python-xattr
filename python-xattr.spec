@@ -5,7 +5,7 @@
 Summary:	Extended attributes for python
 Name:		python-xattr
 Version:	0.9.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/xattr

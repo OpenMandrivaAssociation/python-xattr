@@ -1,3 +1,4 @@
+%global debug_package %{nil}
 %define real_name xattr
 # we don't want to provide private python extension libs
 %define _exclude_files_from_autoprov %{python2_sitearch}/.*\\.so\\|%{python3_sitearch}/.*\\.so
@@ -5,11 +6,11 @@
 Summary:	Extended attributes for python
 Name:		python-xattr
 Version:	0.9.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/xattr
-source0:	https://github.com/xattr/xattr/archive/v%{version}.tar.gz
+Source0:	https://github.com/xattr/xattr/archive/v%{version}.tar.gz
 Provides:	pyxattr = %{version}-%{release}
 BuildRequires:	attr-devel
 BuildRequires:	pkgconfig(libffi)
@@ -47,7 +48,6 @@ pushd %py2dir
 CFLAGS="%{optflags}" %{__python2} setup.py build
 popd
 
-
 %install
 # python2
 pushd %py2dir
@@ -59,7 +59,6 @@ popd
 pushd %py3dir
 %{__python} setup.py install --root="%{buildroot}" --prefix="%{_prefix}" --install-purelib=%{python_sitearch}
 popd
-
 
 %files
 %{py_platsitedir}/*

@@ -9,7 +9,7 @@ Version:	1.1.0
 Release:	1
 License:	GPL
 Group:		Development/Python
-URL:		http://pypi.python.org/pypi/xattr
+URL:		https://pypi.python.org/pypi/xattr
 Source0:	https://github.com/xattr/xattr/archive/v%{version}.tar.gz
 Provides:	pyxattr = %{version}-%{release}
 BuildRequires:	attr-devel

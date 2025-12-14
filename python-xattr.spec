@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python-pkg-resources
 BuildRequires:	python%{pyver}dist(cffi)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
 

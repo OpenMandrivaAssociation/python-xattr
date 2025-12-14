@@ -1,40 +1,47 @@
 %global debug_package %{nil}
-%define real_name xattr
+%define module xattr
 # we don't want to provide private python extension libs
 %define _exclude_files_from_autoprov %{python_sitearch}/.*\\.so\\
 
 Summary:	Extended attributes for python
 Name:		python-xattr
-Version:	1.1.4
+Version:	1.3.0
 Release:	1
-License:	GPL
+License:	MIT
 Group:		Development/Python
 URL:		https://pypi.python.org/pypi/xattr
-Source0:	https://github.com/xattr/xattr/archive/v%{version}.tar.gz
-Provides:	pyxattr = %{version}-%{release}
-BuildRequires:	attr-devel
+Source0:	https://github.com/xattr/xattr/archive/v%{version}/%{name}-%{version}.tar.gz
+
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(libattr)
 BuildRequires:	pkgconfig(libffi)
-BuildRequires:	python-cffi
-BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python-pkg-resources
+BuildRequires:	python%{pyver}dist(cffi)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+
+Provides:	pyxattr = %{version}-%{release}
 
 %description
-python-xattr is a C extension module for Python which implements
+python-xattr is a C extension  for Python which implements
 extended attributes manipulation. It is a wrapper on top of the
 attr C library - see attr(5).
 
 %prep
-%autosetup -n %{real_name}-%{version}
+%autosetup -n %{module}-%{version}
 
 %build
 export CFLAGS="%{optflags}"
 %py_build
 
-
 %install
-%py_install -- --install-purelib=%{python_sitearch}
+%py_install
 
 %files
-%{py_platsitedir}/*
-%{_bindir}/xattr
+%doc README.rst
+%license LICENSE.txt
+%{_bindir}/%{module}
+%{python_sitearch}/%{module}
+%{python_sitearch}/%{module}-%{version}.dist-info
+

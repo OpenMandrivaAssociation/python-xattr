@@ -6,7 +6,7 @@
 Summary:	Extended attributes for python
 Name:		python-xattr
 Version:	1.3.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Python
 URL:		https://pypi.python.org/pypi/xattr
